@@ -126,7 +126,7 @@ plt.ylabel('True')
 st.pyplot(plt)
 
 
-st.subheader("Top Restaurante pe baza Scorului de Sentiment")
+st.subheader("Top Restaurants based on Sentiment Score")
 
 sentiment_scores = data.groupby('restaurant_name').agg(
     total_score=('sentiment', lambda x: (x == 'positive').sum() - (x == 'negative').sum())
